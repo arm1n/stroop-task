@@ -1,0 +1,38 @@
+<div
+  class="counter"
+  *ngIf="currentState === 'COUNTDOWN'" >
+  <count-down
+    [startTime]="config.countDown"
+    (onFinish)="onCountDown($event)">
+  </count-down>
+</div>
+
+<div
+  class="colors"
+  *ngIf="currentState === 'RUNNING'" >
+  <color
+    [color]="color"
+    [disabled]="!currentWord"
+    (onSelect)="onSelectColor($event)"
+    *ngFor="let color of config.colors">
+  </color>
+</div>
+
+<div
+  class="words"
+  *ngIf="currentState === 'RUNNING'" >
+  <word
+    *ngIf="currentWord"
+    [word]="currentWord"
+    [color]="currentColor"
+    (onRender)="onRenderWord($event)">
+  </word>
+</div>
+
+<div
+  class="results"
+  [innerHTML]="safeFinishHTML"
+  *ngIf="currentState === 'FINISHED'">
+</div>
+
+<input type="hidden" [name]="config.hiddenInputName" [value]="resultAsString">

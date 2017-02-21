@@ -1,0 +1,22 @@
+:host{
+  color: white;
+  margin: 0 5px;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.background{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  position: absolute;
+  background: slategray;
+}
+
+.foreground{
+  z-index: 2;
+  position: relative;
+}
