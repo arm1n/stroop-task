@@ -2,6 +2,8 @@
 
 This Angular 2 component implements the modified stroop task, which presents 24 words (8 related, 16 unrelated) to user in two colors (blue, red). The user has then to choose the current color of the given random word by pressing the key strokes (j=blue, k=red), which will be described in advance. Purpose of the component is to measure the user's reaction time for choosing the color via pressing a key.
 
+**Demo**: [Click here](https://arm1n.github.io//stroop-task) to see a demo of the task.
+
 ## Prerequisites
 
 You need [Angular CLI](https://cli.angular.io/) to run application locally and create a build for production. Angular CLI depends on [NodeJS](https://nodejs.org/en/download/) >= 4 and [NPM](https://www.npmjs.com/) >= 3. Simply [download and install NodeJS](https://nodejs.org/en/download/) if you haven't got it already. You can verify it by typing the following commands into your terminal:
