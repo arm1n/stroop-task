@@ -102,7 +102,7 @@ export class ColorComponent {
   }
 
   /**
-   * Returns color's enum as html color string.
+   * Returns color's value as RGB color string.
    *
    * @public
    * @type {String}
@@ -110,6 +110,18 @@ export class ColorComponent {
   @HostBinding('style.backgroundColor')
   public get colorValue(): string {
     return this.color.value;
+  }
+
+  /**
+   * Returns color's key code as char.
+   *
+   * @public
+   * @type {String}
+   */
+  public get colorKeyChar(): string {
+    return String.fromCharCode(
+      this.color.keyCode
+    );
   }
 
   /**

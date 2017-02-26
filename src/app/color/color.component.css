@@ -2,6 +2,7 @@
   color: white;
   margin: 0 5px;
   padding: 10px;
+  min-width: 50px;
   position: relative;
   display: inline-block;
 }
@@ -12,11 +13,25 @@
   right: 0;
   bottom: 0;
   z-index: 1;
+  background: #999;
   position: absolute;
-  background: slategray;
 }
 
 .foreground{
   z-index: 2;
   position: relative;
+}
+
+.foreground:before{
+  z-index: 1;
+  color: #999;
+  width: 10px;
+  padding: 5px;
+  display: block;
+  background: #fff;
+  font-weight: bold;
+  position: relative;
+  margin: 0 auto 10px;
+  content: attr(data-key);
+  text-transform: lowercase;
 }

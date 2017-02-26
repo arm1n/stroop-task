@@ -1,2 +1,4 @@
 <div class="background" [@background]="animationState"></div>
-<span class="foreground">{{colorValue}}</span>
+<span class="foreground" [attr.data-key]="colorKeyChar">
+  {{colorValue}}
+</span>
