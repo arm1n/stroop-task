@@ -247,10 +247,9 @@ export class StroopTaskComponent implements OnInit {
     }
 
     for (let i=0; i<this.config.rounds; i++) {
-      this.words = this.words.concat(this.config.words);
+      const shuffled = this.randomService.shuffle(this.config.words);
+      this.words = this.words.concat(shuffled);
     }
-
-    this.words = this.randomService.shuffle(this.words);
   }
 
   /**
