@@ -7,16 +7,6 @@
   display: inline-block;
 }
 
-.background{
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background: #999;
-  position: absolute;
-}
-
 .foreground{
   z-index: 2;
   position: relative;

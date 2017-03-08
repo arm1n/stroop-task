@@ -1,1 +1,28 @@
+.task{
+  text-align: center;
+}
 
+.task .table{
+  display: table;
+  margin: 0 auto;
+}
+
+.task .row {
+  display: table-row;
+}
+
+.task .cell{
+  height: 100px;
+
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.task .cell.word{
+  width: 500px;
+}
+
+.task .result{
+  font-size: 40px;
+  font-weight: bold;
+}

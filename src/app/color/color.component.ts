@@ -26,16 +26,6 @@ import { Color } from './color.type';
   styleUrls: [ './color.component.css'],
   templateUrl: './color.component.html',
   animations: [
-    trigger('background', [
-      transition('active <=> inactive', [
-       style({
-         opacity: '0',
-       }),
-       animate('0.4s ease-out', style({
-         opacity: '0'
-       }))
-     ]),
-    ]),
     trigger('host', [
       transition('active <=> inactive', [
        style({

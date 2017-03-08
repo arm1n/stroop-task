@@ -91,8 +91,8 @@ export class StroopTaskComponent implements OnInit {
   public config: Config = {
     rounds: 2,
     countDown: 10,
-    randomMean: 1000,
-    randomStdDev: 250,
+    randomMean: 500,
+    randomStdDev: 0,
     hiddenInputName: 'results',
     finishHTML: '<strong>Finished!</strong>',
     colors: [
@@ -159,6 +159,14 @@ export class StroopTaskComponent implements OnInit {
    * @type {Color}
    */
   public currentColor: Color = null;
+
+  /**
+   * Information for user after selection.
+   *
+   * @public
+   * @type {Boolean}
+   */
+  public currentResult: boolean = null;
 
   /**
    * Static CSS class name of component.
@@ -294,9 +302,22 @@ export class StroopTaskComponent implements OnInit {
   public onSelectColor(color: Color) {
     this.trackerService.end();
 
+    this._setResult(color);
     this._addResult(color);
     this._nextRound();
   }
+
+  /**
+   * Adds current result to collection.
+   *
+   * @private
+   * @param {Color} selectedColor
+   * @return {Void}
+   */
+  private _setResult(selectedColor: Color) {
+    this.currentResult = this.currentColor === selectedColor;
+  }
+
 
   /**
    * Adds current result to collection.
@@ -341,6 +362,7 @@ export class StroopTaskComponent implements OnInit {
     this._timeoutId = window.setTimeout(() => {
       this.currentColor = this._getRandomColor();
       this.currentWord = this._getRandomWord();
+      this.currentResult = null;
     }, random ? this._getRandomTimeout() : 0);
   }
 

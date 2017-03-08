@@ -8,25 +8,41 @@
 </div>
 
 <div
-  class="colors"
-  *ngIf="currentState === 'RUNNING'" >
-  <color
-    [color]="color"
-    [disabled]="!currentWord"
-    (onSelect)="onSelectColor($event)"
-    *ngFor="let color of config.colors">
-  </color>
-</div>
+  class="task"
+  *ngIf="currentState === 'RUNNING'">
 
-<div
-  class="words"
-  *ngIf="currentState === 'RUNNING'" >
-  <word
-    *ngIf="currentWord"
-    [word]="currentWord"
-    [color]="currentColor"
-    (onRender)="onRenderWord($event)">
-  </word>
+  <div class="table">
+    <div class="cell color">
+      <color
+        [color]="config.colors[0]"
+        [disabled]="!currentWord"
+        (onSelect)="onSelectColor($event)">
+      </color>
+    </div>
+
+    <div class="cell word">
+      <word
+        *ngIf="currentWord"
+        [word]="currentWord"
+        [color]="currentColor"
+        (onRender)="onRenderWord($event)">
+      </word>
+    </div>
+
+    <div class="cell color">
+      <color
+        [color]="config.colors[1]"
+        [disabled]="!currentWord"
+        (onSelect)="onSelectColor($event)">
+      </color>
+    </div>
+  </div>
+
+  <div class="result" *ngIf="currentResult !== null">
+    <span  *ngIf="currentResult">Correct</span>
+    <span *ngIf="!currentResult">Error</span>
+  </div>
+
 </div>
 
 <div
