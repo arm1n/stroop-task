@@ -37,7 +37,7 @@ Please note that you must provide a *valid* JSON-String if you want to configure
     "finishHTML": "<strong>Finished!</strong>",
     "colors": [
       { "value": "BLUE", "keyCode": 74 },
-      { "value": "RED", "keyCode": 75 },
+      { "value": "RED", "keyCode": 75 }
     ],
     "words": [
       { "value": "Google", "type": "RELATED" },
@@ -63,7 +63,7 @@ Please note that you must provide a *valid* JSON-String if you want to configure
       { "value": "paper", "type": "UNRELATED" },
       { "value": "eraser", "type": "UNRELATED" },
       { "value": "laser", "type": "UNRELATED" },
-      { "value": "television", "type": "UNRELATED" },
+      { "value": "television", "type": "UNRELATED" }
     ]
 }
 ```
