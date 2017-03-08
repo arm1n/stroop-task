@@ -96,8 +96,8 @@ export class StroopTaskComponent implements OnInit {
     hiddenInputName: 'results',
     finishHTML: '<strong>Finished!</strong>',
     colors: [
-      { value: 'BLUE', keyCode: 74 }, // = j
-      { value: 'RED', keyCode: 75 },  // = k
+      { value: 'BLUE', keyCode: 69 }, // = e
+      { value: 'RED', keyCode: 73 },  // = i
     ],
     words: [
       { value: 'Google', type: 'RELATED' },
